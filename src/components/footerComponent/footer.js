@@ -6,7 +6,6 @@ class Footer extends Component {
         return (
             <footer align= "center">
                Click here to go back to the top!!
-
             </footer>
         );
     }

@@ -9,7 +9,8 @@ import {
 import Header from './components/headerComponent/header';
 import Footer from './components/footerComponent/footer';
 import Homepage from "./components/pages/homePage";
-import Signin from  "./components/pages/signin";
+import Signin from  "./components/pages/login";
+import Register from "./components/pages/register";
 
 // CSS
 import './Assets/scss/css/default.min.css';
