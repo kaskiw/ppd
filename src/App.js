@@ -9,8 +9,10 @@ import {
 import Header from './components/headerComponent/header';
 import Footer from './components/footerComponent/footer';
 import Homepage from "./components/pages/homePage";
-import Signin from  "./components/pages/login";
+import Login from  "./components/pages/login";
 import Register from "./components/pages/register";
+import Loginscreen from "./components/pages/loginScreen";
+
 
 // CSS
 import './Assets/scss/css/default.min.css';
@@ -23,7 +25,13 @@ class App extends Component {
 
         <Header  />
           <Route exact path= "/" component= {Homepage}/>
-          <Route exact path= "/signin" component={Signin} />
+          <Route exact path= "/login" component={Login} />
+          {/* <Route exact path= "/discover" component= {Discover} /> */}
+       
+          <div className= "background"> 
+          
+          </div>
+       
         <Footer  />
       
       </div>
