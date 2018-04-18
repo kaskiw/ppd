@@ -1,13 +1,12 @@
 'use strict';
 
 // dependencies //
-
-const gulp = require ("gulp");
-const sass = require ("gulp-sass");
-const minifyCSS = require ("gulp-clean-css");
-const uglify = require ("gulp-uglify");
-const rename = require ("gulp-rename");
-const changed = require ("gulp-changed");
+const gulp = require ('gulp')
+const sass = require ('gulp-sass')
+const minifyCSS = require ('gulp-clean-css')
+const uglify = require ('gulp-uglify')
+const rename = require ('gulp-rename')
+const changed = require ('gulp-changed');
 
 
 /////////
@@ -17,12 +16,12 @@ const changed = require ("gulp-changed");
 const SCSS_SRC = './src/Assets/scss/**/*.scss';
 const SCSS_DEST = './src/Assets/scss/css';
 
-// compile scss
+// Compile scss
  gulp.task('compile_scss', function(){
      gulp.src(SCSS_SRC)
-     .pipe(sass().on('err', sass.logError))
+     .pipe(sass().on('error', sass.logError))
      .pipe(minifyCSS())
-     .pipe(rename({ suffix: '.min'}))
+     .pipe(rename({ suffix: '.min' }))
      .pipe(changed(SCSS_DEST))
      .pipe(gulp.dest(SCSS_DEST));
  });
@@ -33,4 +32,4 @@ const SCSS_DEST = './src/Assets/scss/css';
  });
 
  // Run commands
- gulp.task('defult', ['watch_scss']);
+    gulp.task('default', ['watch_scss']);
